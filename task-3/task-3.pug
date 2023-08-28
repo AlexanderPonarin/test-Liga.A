@@ -1,0 +1,16 @@
+mixin listElement(number, options)
+    li.hero__item
+        .hero__label-wrapper
+            span.hero__number!= number + " " + options.spanText
+            h2.hero__label= options.label + " " + number
+        .hero__info-wrapper
+            p.hero__info!= options.info + " " + number
+
+mixin heroBlock(numbers, options)
+  .hero
+    .container
+      h1.hero__title!= options.title
+      p.hero__description!= options.description
+      ul.hero__list
+        each number in numbers
+          +listElement(number, options)

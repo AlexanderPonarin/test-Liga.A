@@ -1,0 +1,18 @@
+
+
+mixin listElement(number)
+    li.hero__item
+        .hero__label-wrapper
+            span.hero__number= number + ' элемент блока'
+            h2.hero__label= 'Подзаголовок №' + number
+        .hero__info-wrapper
+            p.hero__info= 'Текстовое описание №' + number
+
+mixin heroBlock(numbers)
+  .hero
+    .container
+      h1.hero__title Заголовок блока
+      p.hero__description Текстовое описание блока
+      ul.hero__list
+        each number in numbers
+          +listElement(number)

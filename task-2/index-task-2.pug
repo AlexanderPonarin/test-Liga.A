@@ -1,0 +1,16 @@
+
+include ../task-2/task-2.pug
+
+block variables
+  - const title = "Название страницы"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const numbers = [1, 2, 3];
+
+
+block main
+  main
+    +heroBlock(numbers)
